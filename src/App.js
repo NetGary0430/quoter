@@ -2,6 +2,7 @@ import React from "react";
 import QuoteAndAuthor from "./QuoteAndAuthor";
 import quotes from './QuotesDatabase'
 import "./App.css";
+import ReactFCCtest from 'react-fcctest';
 
 class App extends React.Component {
   constructor() {
@@ -45,6 +46,7 @@ class App extends React.Component {
           handleClick={this.handleClick}
           {...this.state}
         />
+        <ReactFCCtest />
       </div>
     );
   }
