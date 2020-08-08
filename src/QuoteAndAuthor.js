@@ -13,18 +13,28 @@ class QuoteAndAuthor extends React.Component {
           key={Math.random()}
           style={{ color: randomColor }}
         >
-          <h1 id="quote">"{this.props.quote}"</h1>
+          <h1 id="text">"{this.props.quote}"</h1>
           <h5 id="author">
             -{this.props.author ? this.props.author : "Unknown"}-
           </h5>
         </div>
         <button
           style={{ backgroundColor: randomColor }}
-          id="newquote"
+          id="new-quote"
           onClick={this.props.handleClick}
         >
           New quote
         </button>
+        <br />
+        <a
+          class="btn btn-primary"
+          href={"https://twitter.com/intent/tweet?text=" + this.props.quote}
+          id="tweet-quote"
+          target="_blank"
+          role="button"
+        >
+          <i class="fa fa-twitter"></i> Tweet
+        </a>
       </div>
     );
   }
